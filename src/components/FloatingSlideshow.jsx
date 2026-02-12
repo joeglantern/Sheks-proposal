@@ -91,34 +91,39 @@ const FloatingSlideshow = () => {
                     <div className="relative w-full aspect-[9/16] overflow-hidden rounded-3xl md:rounded-[3rem] shadow-2xl border-8 border-white/30 bg-rose-50">
                         {/* Render all videos layered, show current one */}
                         <div className="relative w-full h-full">
-                            {mediaItems.map((item, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="absolute inset-0"
-                                    initial={false}
-                                    animate={{
-                                        opacity: index === currentIndex ? 1 : 0,
-                                        scale: index === currentIndex ? 1 : 1.05,
-                                    }}
-                                    transition={{
-                                        duration: 0.8,
-                                        ease: [0.22, 1, 0.36, 1]
-                                    }}
-                                >
-                                    <video
-                                        src={item.src}
-                                        className="w-full h-full object-cover"
-                                        autoPlay
-                                        muted
-                                        loop
-                                        playsInline
-                                        preload="none"
-                                    />
+                            {mediaItems.map((item, index) => {
+                                const isCurrent = index === currentIndex;
+                                const isNext = index === (currentIndex + 1) % mediaItems.length;
 
-                                    {/* Subtle gradient overlay for depth */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-rose-900/10 via-transparent to-transparent pointer-events-none" />
-                                </motion.div>
-                            ))}
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        className="absolute inset-0"
+                                        initial={false}
+                                        animate={{
+                                            opacity: isCurrent ? 1 : 0,
+                                            scale: isCurrent ? 1 : 1.05,
+                                        }}
+                                        transition={{
+                                            duration: 0.4,
+                                            ease: "easeInOut"
+                                        }}
+                                    >
+                                        <video
+                                            src={item.src}
+                                            className="w-full h-full object-cover"
+                                            autoPlay={isCurrent}
+                                            muted
+                                            loop
+                                            playsInline
+                                            preload={isCurrent || isNext ? "auto" : "none"}
+                                        />
+
+                                        {/* Subtle gradient overlay for depth */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-rose-900/10 via-transparent to-transparent pointer-events-none" />
+                                    </motion.div>
+                                );
+                            })}
                         </div>
                     </div>
 
