@@ -71,7 +71,7 @@ const Celebration = () => {
                     {/* Parchment scroll background */}
                     <div className="relative">
                         <img
-                            src="/pngtree-aged-parchment-scroll-with-authentic-old-paper-texture-png-image_21093002.png"
+                            src={`${import.meta.env.BASE_URL}pngtree-aged-parchment-scroll-with-authentic-old-paper-texture-png-image_21093002.png`}
                             alt="Parchment scroll"
                             className="w-full h-auto"
                         />

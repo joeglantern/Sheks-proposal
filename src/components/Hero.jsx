@@ -65,7 +65,7 @@ const Hero = () => {
                 }}
             >
                 <img
-                    src="/flower-bouquet.png"
+                    src={`${import.meta.env.BASE_URL}flower-bouquet.png`}
                     alt="Flower bouquet"
                     className="w-full h-auto"
                     style={{
@@ -97,7 +97,7 @@ const Hero = () => {
                 }}
             >
                 <img
-                    src="/love-tree.png"
+                    src={`${import.meta.env.BASE_URL}love-tree.png`}
                     alt="Valentine's love tree"
                     className="w-full h-auto"
                     style={{
