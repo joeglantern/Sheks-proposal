@@ -112,7 +112,7 @@ const FloatingSlideshow = () => {
                                         muted
                                         loop
                                         playsInline
-                                        preload="auto"
+                                        preload="none"
                                     />
 
                                     {/* Subtle gradient overlay for depth */}
