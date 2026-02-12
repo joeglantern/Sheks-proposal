@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-// Media items
+// Media items with BASE_URL for GitHub Pages
 const mediaItems = [
-    { src: '/memories/8E44B908-0B69-43F9-8E86-D2E29D8974D7.MP4', type: 'video' },
-    { src: '/memories/C4F27B08-CF38-4719-B674-D2374D2A1F8C.MP4', type: 'video' },
-    { src: '/memories/VIDEO-2025-12-29-14-02-17.mp4', type: 'video' },
-    { src: '/memories/127e5e8e0c984d0babaf19dd2431c91d.mov', type: 'video' },
+    { src: `${import.meta.env.BASE_URL}memories/8E44B908-0B69-43F9-8E86-D2E29D8974D7.MP4`, type: 'video' },
+    { src: `${import.meta.env.BASE_URL}memories/C4F27B08-CF38-4719-B674-D2374D2A1F8C.MP4`, type: 'video' },
+    { src: `${import.meta.env.BASE_URL}memories/VIDEO-2025-12-29-14-02-17.mp4`, type: 'video' },
+    { src: `${import.meta.env.BASE_URL}memories/127e5e8e0c984d0babaf19dd2431c91d.mov`, type: 'video' },
 ];
 
 const FloatingSlideshow = () => {

@@ -67,6 +67,8 @@ const Hero = () => {
                 <img
                     src={`${import.meta.env.BASE_URL}flower-bouquet.png`}
                     alt="Flower bouquet"
+                    loading="eager"
+                    fetchpriority="high"
                     className="w-full h-auto"
                     style={{
                         filter: 'drop-shadow(15px 15px 30px rgba(244, 63, 94, 0.25)) drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15))',
@@ -99,6 +101,8 @@ const Hero = () => {
                 <img
                     src={`${import.meta.env.BASE_URL}love-tree.png`}
                     alt="Valentine's love tree"
+                    loading="eager"
+                    fetchpriority="high"
                     className="w-full h-auto"
                     style={{
                         filter: 'drop-shadow(12px 12px 25px rgba(244, 63, 94, 0.2)) drop-shadow(3px 3px 12px rgba(0, 0, 0, 0.12))',
