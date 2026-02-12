@@ -65,7 +65,7 @@ const Hero = () => {
                 }}
             >
                 <img
-                    src="/—Pngtree—flower bouquet_16936472.png"
+                    src="/flower-bouquet.png"
                     alt="Flower bouquet"
                     className="w-full h-auto"
                     style={{
@@ -97,7 +97,7 @@ const Hero = () => {
                 }}
             >
                 <img
-                    src="/—Pngtree—valentines day frame love tree_7263556.png"
+                    src="/love-tree.png"
                     alt="Valentine's love tree"
                     className="w-full h-auto"
                     style={{
