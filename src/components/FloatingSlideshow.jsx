@@ -112,11 +112,11 @@ const FloatingSlideshow = () => {
                                         <video
                                             src={item.src}
                                             className="w-full h-full object-cover"
-                                            autoPlay={isCurrent}
+                                            autoPlay
                                             muted
                                             loop
                                             playsInline
-                                            preload={isCurrent || isNext ? "auto" : "none"}
+                                            preload="auto"
                                         />
 
                                         {/* Subtle gradient overlay for depth */}
